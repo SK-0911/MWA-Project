@@ -16,7 +16,7 @@ span {
 
 .header{
     width: 50%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("background.jpg");
+    background-image: linear-gradient(rgba(32, 51, 129, 0.7), rgba(32, 51, 129, 0.7)), url(images/background.jpg);
 
 }
 
