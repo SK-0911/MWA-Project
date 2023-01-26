@@ -1,6 +1,7 @@
 *{
 	margin: 0px;
 	padding: 0px;
+	font-family: 'Poppins', sans-serif;
 }
 .header{
 	min-height: 100vh;
@@ -10,6 +11,7 @@
 	background-size: cover;
 	position: relative;
 }
+
 nav{
 	display: flex;
 	padding: 1% 2%;
@@ -25,6 +27,7 @@ nav img{
 	flex: 1;
 	text-align: right;
 }
+
 .nav-links ul li{
 	list-style: none;
 	display: inline-block;
@@ -35,4 +38,40 @@ nav img{
 	color: #fff;
 	text-decoration: none;
 	font-size: 15px;
+	transition: font-size 0.5s ease;
+   	
+}
+
+.nav-links ul li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #f44336;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.nav-links ul li:hover:after{
+	width: 100%;
+}
+
+.text-box{
+	width:90%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.text-box h1{
+	font-size: 62px;
+}
+
+.text-box p{
+	margin: 10px 0px 40px;
+	font-size: 14px;
+	color: #fff;
 }
