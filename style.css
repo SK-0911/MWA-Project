@@ -121,7 +121,47 @@ nav .fa{
 		padding: 20px;
 	}
 }
+/* --------- Schools --------- */
 
+.schools{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding: 43px 80px;
+}
+h1{
+	font-size: 36px;
+	font-weight: 600;
+}
+
+.row{
+	margin-top: 2.5%;
+	display: flex;
+	justify-content: space-between;
+}
+.row3{
+	align-content: center;
+	padding-left: 350px;
+	padding-right: 350px;
+	padding-top: 5px;
+}
+.school-col{
+	flex-basis: 31%;
+	background: #f8f8f8;
+	border-radius: 10px;
+	margin-bottom: 1%;
+	padding: 5px 7px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+h3{
+	text-align: center;
+	font-weight: 600;
+	margin: 10px;
+}
+.school-col:hover{
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
 /*-----------contact us------------*/
 
 .sub-header{
