@@ -193,6 +193,12 @@ nav .fa{
 	margin-bottom : 5px;
 	font-weight : 400;
 }
+
+.contact-col h4{
+	font-size : 20px;
+	font-weight : 600;
+}
+
 /* *******Form******* */
 .submit-btn{
 	display: inline-block;
@@ -213,6 +219,17 @@ nav .fa{
 	transition: 1s;
 }
 
+.contact-col input, .contact-col textarea{
+	width: 97%;
+	padding : 15px;
+	margin-bottom: 17px;
+	outline: none;
+	border: 1px solid #ccc;
+}
 
-
+.horizontal_line {
+	border-bottom: 5px solid rgb(209, 51, 51);
+	margin-top: 5px;
+	width: 100%;
+}
 
