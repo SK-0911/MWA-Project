@@ -190,8 +190,20 @@ nav img{
 	margin-bottom : 5px;
 	font-weight : 400;
 }
-
-
-
-
+.line {
+	border-bottom: 5px solid rgb(220, 67, 67);
+	margin-top: 5px;
+	width: 100%;
+}
+.contact-col input, .contact-col textarea{
+	width :  97%;
+	padding : 15px;
+	margin-bottom : 17px;
+	outline: none;
+	border : 1px solic #ccc;
+}
+.contact-col h4{
+	font-size : 22px;
+	font-weight : 600;
+}
 
