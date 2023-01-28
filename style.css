@@ -154,7 +154,7 @@ h1{
 	box-sizing: border-box;
 	transition: 0.5s;
 }
-h3{
+h3.school-heading{
 	text-align: center;
 	font-weight: 600;
 	margin: 10px;
@@ -162,6 +162,7 @@ h3{
 .school-col:hover{
 	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
+
 /*-----------contact us------------*/
 
 .sub-header{
@@ -281,7 +282,3 @@ h3{
 	margin-top: 5px;
 	width: 100%;
 }
-
-
-
-  
