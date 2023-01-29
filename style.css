@@ -161,6 +161,8 @@ h3.school-heading{
 }
 .school-col:hover{
 	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+	transform: scale(1.08);
+	cursor: default;
 }
 
 /*-----------contact us------------*/
