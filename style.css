@@ -140,10 +140,13 @@ h1{
 	justify-content: space-between;
 }
 .row3{
-	align-content: center;
-	padding-left: 350px;
+	margin-top: 2.5%;
+	display: flex;
+	justify-content: center;
+	/* align-content: center; */
+	/* padding-left: 350px;
 	padding-right: 350px;
-	padding-top: 5px;
+	padding-top: 5px; */
 }
 .school-col{
 	flex-basis: 31%;
@@ -289,8 +292,14 @@ h3.school-heading{
 .alumni{
 	width: 80%;
 	margin: auto;
-	padding-top: 60px;
+	padding-top: 40px;
 	text-align: center;
+}
+
+.alumni>.row>.alumni-col:hover {
+	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+	transform: scale(1.05);
+	cursor: default;
 }
 
 .alumni h1{
@@ -330,4 +339,29 @@ h3.school-heading{
 .alumni-col h3{
 	margin-top: 15px;
 	text-align: left;
+}
+
+/* ******* Company ******* */
+
+.company-stats{
+	width: 100%;
+	margin: auto;
+	padding-top: 40px;
+	text-align: center;
+}
+
+.company-stats>h1{
+	font-size: 36px;
+	font-weight: 600;
+}
+
+
+#company-img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80%;
+	border-radius: 5px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
