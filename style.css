@@ -446,3 +446,53 @@ footer ul li a:hover{
 .sub--header h1{
 	margin-top : 80px;
 }
+
+.mission-vision{
+	text-align: center;
+	padding-top: 30px;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+.mission-vision::after{
+	content: "";
+	height: 4px;
+	width: 200px;
+	background-color: lightgrey;
+	display: block;
+	margin: auto;
+}
+
+.about-us{
+	width: 85%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 75px auto;
+	text-align: center;
+}
+
+.mission-box{
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	margin: 0px 20px;
+	padding: 20px 20px;
+	background-color: lightgrey;
+	border-radius: 10px;
+}
+
+.vision-box{
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	margin: 0px 20px;
+	padding: 20px 20px;
+	background-color: lightgrey;
+	border-radius: 10px;
+	font-size: 20px;
+}
