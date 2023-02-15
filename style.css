@@ -454,14 +454,14 @@ footer ul li a:hover{
 	box-sizing: border-box;
 }
 
-.mission-vision::after{
+/* .mission-vision::after{
 	content: "";
 	height: 4px;
 	width: 200px;
 	background-color: lightgrey;
 	display: block;
 	margin: auto;
-}
+} */
 
 .about-us{
 	width: 85%;
