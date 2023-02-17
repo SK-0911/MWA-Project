@@ -1,0 +1,12 @@
+form {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px black;
+    text-align: left;
+    background-color: #444;
+    color: white;
+    font-family: Arial, sans-serif;
+    opacity: 1;
+}
