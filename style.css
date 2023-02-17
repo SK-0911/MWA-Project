@@ -403,7 +403,11 @@ footer ul li a:hover{
 	gap: 5rem;
 
 }
-
+.footer4 li{
+	list-style: none;
+	font-size: 40px;
+	display: inline-block;
+}
 .footer-container > a{
 	padding-left: 4rem;
 }
