@@ -403,6 +403,10 @@ footer ul li a:hover{
 	gap: 5rem;
 
 }
+
+.branding{
+	padding-left: 0px;
+}
 .footer4 li{
 	list-style: none;
 	font-size: 40px;
