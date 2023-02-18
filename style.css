@@ -509,7 +509,27 @@ footer ul li a:hover{
 	cursor: pointer;
 }
 
-.team-section .conatiner .team-card .card :hover{
+.team-section .container .team-card .card :hover{
 	background-color : #c74c4c;
-	transition: 0.4s;
+	transition: 0.3s;
+	padding: 10px;
+}
+
+.about-us{
+	padding-top: 80px;
+	display: flex;
+	justify-content: space-evenly;
+	text-align: center;
+}
+
+.mission-box{
+	border-radius: 10px;
+	background-color: #dbd8d8;
+	padding: 25px;
+}
+
+.vision-box{
+	border-radius: 10px;
+	background-color: #dbd8d8;
+	padding: 25px;
 }
