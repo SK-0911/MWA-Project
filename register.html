@@ -11,29 +11,104 @@
     <h1>Student Registration</h1>
     <form>
         <div class="form">
+            <!-- personal details -->
+            <h3>Personal Details</h3>
             <label for="name" id="name-label">Name</label>
             <input type="text" id="name" placeholder="First name" required>
             <input type="text" id="name" placeholder="Last name" required>
             <br><br>
-            
+            <label for="SAPid" id="SAPid-label">SAP Id</label>
+            <input type="number" id="SAPid" name="SAPid" required>
             <br><br>
             <label for="email" id="email-label">Email</label>
             <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
             <br><br>
             <label for="phone" id="phone-label">Phone</label>
-            <input type="number" id="phone" required>
+            <input type="tel" id="phone" required>
             <br><br>
             <label for="dob" id="dob-label">Date of Birth</label>
             <input type="date" id="DOB" name="DOB" required>
             <br><br>
-            <label for="gender" id="gender-label">Gender</label>
+            <label for="gender" id="gender-label" required>Gender</label>
             <input type="radio" id="gender" name="gender">Male</input>
             <input type="radio" id="gender" name="gender">Female</input>
             <br><br>
-            <label for="email" id="email-label">Email</label>
-            <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
-            <br><br>
         </div>
+        <div>
+            <!-- qualification details -->
+            <h3>Graduation Details</h3>
+            <label for="university" id="univ-label">University</label>
+            <input type="text" id="university" required>
+            <br><br>
+            <label for="college" id="college-label">College</label>
+            <input type="text" id="college" required>
+            <br><br>
+            <label for="year" id="year-label">Graduation Year</label>
+            <select id="year" required>
+                <option>--</option>
+                <option id="2023">2023</option>
+                <option id="2024">2024</option>
+                <option id="2025">2025</option>
+                <option id="2026">2026</option>
+                <option id="2027">2027</option>
+                <option id="2028">2028</option>
+            </select>
+            <br><br>
+            <label for="degree" id="degree-label">Degree</label>
+            <select id="degree" required>
+                <option>--select--</option>
+                <option id="B.Tech">BTech</option>
+                <option id="MBA.Tech">MBTech</option>
+                <option id="MBA">MBA</option>
+                <option id="BBA">BBA</option>
+                <option id="B.Com">B.Com</option>
+                <option id="B.Sc (Finance)">B.Sc(Finance)</option>
+                <option id="B.Sc (Economics)">B.Sc(Economics)</option>
+                <option id="B.A.,LL.B.(Hons.)/B.B.A.,LL.B.(Hons.)">B.A.,LL.B.(Hons.)/B.B.A.,LL.B.(Hons.)</option>
+                <option id="B.Sc.Applied Psychology">B.Sc.Applied Psychology</option>
+            </select>
+            <br><br>
+            <label for="specialization" id="specialization-label">Specialization</label>
+            <select id="specialization" required>
+                <option>--select--</option>
+                <option id="CSBS">CSBS</option>
+                <option id="CE">CE</option>
+                <option id="AI/DS">AI/DS</option>
+                <option id="Marketing">Marketing</option>
+                <option id="Finance">Finance</option>
+            </select>
+            <br><br>
+            <label for="cgpa" id="cgpa-label">CGPA</label>
+            <input type="number" min="0" max="4" step="2" required>
+        </div>
+        <br><br>
+        <h4>HSC/XII</h4>
+        <label for="HSC" id="HSC">HSC Board</label>
+        <select id="HSCBoard">
+            <option>--</option>
+            <option value="CBSE">CBSE</option>
+            <option value="ICSE">ICSE</option>
+            <option value="Maharashtra State Board">Maharashtra State Board</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+        <label for="hsc-cgpa">HSC %/CGPA</label>
+        <input type="number" min="0" max="100" step="2" required>
+        <br><br>
+        <h4>SSC/X</h4>
+        <label for="SSC" id="SSC">SSC Board</label>
+        <select id="SSCBoard">
+            <option>--</option>
+            <option value="CBSE">CBSE</option>
+            <option value="ICSE">ICSE</option>
+            <option value="Maharashtra State Board">Maharashtra State Board</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+        <label for="ssc-cgpa">SSC %/CGPA</label>
+        <input type="number" min="0" max="100" step="2" required>
+        <br><br>
+        <input type="submit" id="submit">
     </form>
 </body>
 </html>
