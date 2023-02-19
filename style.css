@@ -534,3 +534,22 @@ footer ul li a:hover{
 	background-color: #dbd8d8;
 	padding: 25px;
 }
+
+.directors-message {
+	background-color: #f8d3d3;
+	padding: 80px;
+	border: 2px solid #151414;
+	border-radius: 2px;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+	color: #333;
+	margin-top : 70px; 
+  }
+  
+.directors-message h3{
+	font-family: Georgia, serif;
+	font-size : 40px;
+	margin-bottom: 15px;
+}
+  
