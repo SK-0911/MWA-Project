@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="register.css">
     <title>Register</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
-    <div class="form-wrapper">
+    <!-- <div class="form-wrapper">
         <div class="step-row">
             <div id="progress">
 
@@ -32,18 +33,20 @@
                 <small>Position of Responsibility</small>
             </div>
         </div>
-    <div class="form-wrapper">
+    <div class="form-wrapper"> -->
         <h1>Student Registration</h1>
-        <form>
-            <div id="form1">
+        <form id="form1">
+            <div >
                 <h3>Personal Details</h3>
                 <label for="name" id="fname-label">First Name</label>
-                <input type="text" id="fname" placeholder="First name" required><br><br>
+                <input type="text" id="fname" placeholder="First name" required>
+                <p style="color: red;" id="errFirst" onkeyup="validate()"></p>
+                <br>
                 <label for="name" id="lname-label">Last Name</label>
                 <input type="text" id="lname" placeholder="Last name" required>
                 <br><br>
                 <label for="email" id="email-label">Email</label>
-                <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+                <input type="email" id="email" name="email" placeholder="abc@nmims.edu.in" required>
                 <br><br>
                 <label for="phone" id="phone-label">Phone</label>
                 <input type="number" id="phone" required>
@@ -61,8 +64,8 @@
             </div>
         </form>
 
-        <form>
-            <div id="form2">
+        <form  id="form2">
+            <div>
                 <!-- qualification details -->
                 <h3>Graduation Details</h3>
                 <label for="university" id="univ-label">University</label>
@@ -143,8 +146,8 @@
             </div>
             
         </form>
-        <form>
-            <div id="form3">
+        <form id="form3">
+            <div>
                 <!-- Certification & internship details -->
                 <h3>Certifications/Internship Details</h3>
                 <label for="certificate" id="certi-label">Certificate 1 Description</label>
@@ -178,15 +181,14 @@
                 <br><br>
                 <!-- <input type="submit" id="submit"> -->
                 <div class="btn-box">
-                    <button type="button" id="back1">Back</button>
-                    <button type="button" id="next2">Next</button>
+                    <button type="button" id="back2">Back</button>
+                    <button type="button" id="submit">Submit</button>
                 </div>
             </div>
             
         </form>
-
-    </div>
-
-    <script src="script.js"></script>
+    
+   
+    <script src="register.js"></script>
 </body>
 </html>

@@ -10,9 +10,7 @@ updateText()
 
 function updateText(){
     charidx++; // mob=ve to next letter of the word
-    containerE1.innerHTML = `
-    <h1>NMIMS ${animatedText[idx].slice(0, charidx)}</h1>
-    `;
+    containerE1.innerHTML = `<h1>NMIMS ${animatedText[idx].slice(0, charidx)}</h1>`;
     // If that specific word is done
     if (charidx === animatedText[idx].length){
         careerIdx++;    // Move to next word
