@@ -22,23 +22,16 @@ $("#back2").click(function(){
     $("#form2").show();
 });
 
-function validate(){
-    var errs = new Array()
-    errs[0] = "errFirst";
-    errs[1] = "errLast";
-    errs[2] = "errEmail";
-    var inputs = new Array();
-    inputs[0] = document.getElementById('fname').value;
-    inputs[1] = document.getElementById('lname').value;
-    inputs[2] = document.getElementById('email').value;
+// function validate(){
+//     var errs = new Array()
+//     errs[0] = "errFirst";
+//     errs[1] = "errLast";
+//     errs[2] = "errEmail";
+//     var inputs = new Array();
+//     inputs[0] = document.getElementById('fname').value;
+//     inputs[1] = document.getElementById('lname').value;
+//     inputs[2] = document.getElementById('email').value;
 
-    console.log(inputs[0]);
+//     console.log(inputs[0]);
+// }
 
-    for(i in inputs){
-        var err = errs[i];
-        if(inputs[i] == "")
-            document.getElementById(err).innerHTML = "Please enter a value";
-        
-        
-    }
-}
