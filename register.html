@@ -45,11 +45,20 @@
                 <label for="name" id="lname-label">Last Name</label>
                 <input type="text" id="lname" placeholder="Last name" required>
                 <br><br>
+                <label for="sapid" id="sapid-label">SAP Id</label>
+                <input type="text" id="sapid" name="sapid" placeholder=" " maxlength="11" required>
+                <br><br>
                 <label for="email" id="email-label">Email</label>
                 <input type="email" id="email" name="email" placeholder="abc@nmims.edu.in" required>
                 <br><br>
                 <label for="phone" id="phone-label">Phone</label>
                 <input type="number" id="phone" required>
+                <br><br>
+                <label for="linkedin-url" id="linkedin-url">LinkedIn URL</label><br>
+                <input type="text" id="linkedin-url" name="linkedin-url">
+                <br><br>
+                <label for="github-url" id="github-url">GitHub URL</label><br>
+                <input type="text" id="github-url" name="github-url">
                 <br><br>
                 <label for="dob" id="dob-label">Date of Birth</label>
                 <input type="date" id="DOB" name="DOB" required>
@@ -126,6 +135,33 @@
                 <br><br>
                 <label for="hsc-cgpa">HSC %/CGPA</label>
                 <input type="number" min="0" max="100" step="2" required>
+                <br><br>
+                <label for="hsc-pass-year">Passing Year</label>
+                <select id="hsc-pass-year" required>
+                    <option>Select</option>
+                    <option id="2018">2018</option>
+                    <option id="2019">2019</option>
+                    <option id="2020">2020</option>
+                    <option id="2021">2021</option>
+                    <option id="2022">2022</option>
+                </select>
+                <br><br>
+                <h4>Diploma</h4>
+                <label for="diploma" id="diploma">University Board</label>
+                <input type="text" required>
+                <br><br>
+                <label for="dip-cgpa">Diploma %/CGPA</label>
+                <input type="number" min="0" max="100" step="2" required>
+                <br><br>
+                <label for="dip-pass-year">Passing Year</label>
+                <select id="dip-pass-year" required>
+                    <option>Select</option>
+                    <option id="2018">2018</option>
+                    <option id="2019">2019</option>
+                    <option id="2020">2020</option>
+                    <option id="2021">2021</option>
+                    <option id="2022">2022</option>
+                </select>
                 <br><br>
                 <h4>SSC/X</h4>
                 <label for="SSC" id="SSC">SSC Board</label>
