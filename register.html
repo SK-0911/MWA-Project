@@ -45,8 +45,8 @@
     <div class="form-wrapper"> -->
         <h1>Student Registration</h1>
         <form id="form1" ng-app = "mainApp" ng-controller = "studentController" name = "studentForm" novalidate>
-            <div >
-                <h3>Personal Details</h3>
+            <div>
+                <h3 class="text-center">Personal Details</h3>
                 <label for="name" id="fname-label" class="mt-3 h5">First Name</label>
                 <input type="text" id="fname" placeholder="First name" class="form-control" required>
                 <!-- <p style="color: red;" id="errFirst" onkeyup="validate()" class="mb-0">Error</p> -->
@@ -65,9 +65,9 @@
                 
                 <br>
                 <label for="phone" id="phone-label" class="h5">Phone</label>
-                <div class="input-group mt-2">
+                <div class="input-group mt-2 ">
                     <span class="input-group-text"> +91 </span>
-                    <input type="tel" id="phone" class="form-control border" required>
+                    <input type="tel" id="phone" class="form-control border w-20" size="10" required>
                 </div>
                 
                 <br>
@@ -103,7 +103,7 @@
                 <p style="color: red; margin-left: 0;" class="mt-3">All fields are mandatory</p>
                 
                 <div class="btn-box">
-                    <button type="button" id="next1">Next</button>
+                    <button type="button" id="next1" class="rounded-pill">Next</button>
                 </div>
             </div>
         </form>
@@ -111,14 +111,14 @@
         <form  id="form2">
             <div>
                 <!-- qualification details -->
-                <h3>Graduation Details</h3>
-                <label for="university" id="univ-label">University</label>
-                <input type="text" id="university" required>
-                <br><br>
-                <label for="college" id="college-label">College</label>
-                <input type="text" id="college" required>
-                <br><br>
-                <label for="year" id="year-label">Graduation Year</label>
+                <h3 class="text-center mb-3">Graduation Details</h3>
+                <label for="university" id="univ-label" class="h5">University</label>
+                <input type="text" id="university" class="form-control" value="NMIMS" required disabled>
+                <br>
+                <label for="college" id="college-label" class="h5">College</label>
+                <input type="text" id="college" class="form-control" required>
+                <br>
+                <label for="year" id="year-label" class="h5">Graduation Year</label>
                 <select id="year" required>
                     <option>Select</option>
                     <option id="2023">2023</option>
@@ -129,7 +129,7 @@
                     <option id="2028">2028</option>
                 </select>
                 <br><br>
-                <label for="degree" id="degree-label">Degree</label>
+                <label for="degree" id="degree-label" class="h5">Degree</label>
                 <select id="degree" required>
                     <option>Select</option>
                     <option id="B.Tech">BTech</option>
@@ -143,7 +143,7 @@
                     <option id="B.Sc.Applied Psychology">B.Sc.Applied Psychology</option>
                 </select>
                 <br><br>
-                <label for="specialization" id="specialization-label">Specialization</label>
+                <label for="specialization" id="specialization-label" class="h5">Specialization</label>
                 <select id="specialization" required>
                     <option>Select</option>
                     <option id="CSBS">CSBS</option>
@@ -153,11 +153,14 @@
                     <option id="Finance">Finance</option>
                 </select>
                 <br><br>
-                <label for="cgpa" id="cgpa-label">CGPA</label>
+                <label for="cgpa" id="cgpa-label" class="h5">CGPA</label>
                 <input type="number" min="0" max="4" step="2" required>
                 <br><br>
-                <h4>HSC/XII</h4>
-                <label for="HSC" id="HSC">HSC Board</label>
+                <hr class="border-5">
+                <h4 class="text-center"><b>HSC/XII</b></h4>
+                <hr class="border-5">
+                <br>
+                <label for="HSC" id="HSC" class="h5">HSC Board</label>
                 <select id="HSCBoard">
                     <option>Select</option>
                     <option value="CBSE">CBSE</option>
@@ -166,10 +169,10 @@
                     <option value="other">Other</option>
                 </select>
                 <br><br>
-                <label for="hsc-cgpa">HSC %/CGPA</label>
+                <label for="hsc-cgpa" class="h5">HSC %/CGPA</label>
                 <input type="number" min="0" max="100" step="2" required>
                 <br><br>
-                <label for="hsc-pass-year">Passing Year</label>
+                <label for="hsc-pass-year" class="h5">Passing Year</label>
                 <select id="hsc-pass-year" required>
                     <option>Select</option>
                     <option id="2018">2018</option>
@@ -179,14 +182,17 @@
                     <option id="2022">2022</option>
                 </select>
                 <br><br>
-                <h4>Diploma</h4>
-                <label for="diploma" id="diploma">University Board</label>
+                <hr class="border-5">
+                <h4 class="text-center"><b>Diploma</b></h4>
+                <hr class="border-5">
+                <br>
+                <label for="diploma" id="diploma" class="h5">University Board</label>
                 <input type="text" required>
                 <br><br>
-                <label for="dip-cgpa">Diploma %/CGPA</label>
+                <label for="dip-cgpa" class="h5">Diploma %/CGPA</label>
                 <input type="number" min="0" max="100" step="2" required>
                 <br><br>
-                <label for="dip-pass-year">Passing Year</label>
+                <label for="dip-pass-year" class="h5">Passing Year</label>
                 <select id="dip-pass-year" required>
                     <option>Select</option>
                     <option id="2018">2018</option>
@@ -196,8 +202,11 @@
                     <option id="2022">2022</option>
                 </select>
                 <br><br>
-                <h4>SSC/X</h4>
-                <label for="SSC" id="SSC">SSC Board</label>
+                <hr class="border-5">
+                <h4 class="text-center"><b>SSC/X</b></h4>
+                <hr class="border-5">
+                <br>
+                <label for="SSC" id="SSC" class="h5">SSC Board</label>
                 <select id="SSCBoard">
                     <option>Select</option>
                     <option value="CBSE">CBSE</option>
@@ -206,15 +215,15 @@
                     <option value="other">Other</option>
                 </select>
                 <br><br>
-                <label for="ssc-cgpa">SSC %/CGPA</label>
+                <label for="ssc-cgpa" class="h5">SSC %/CGPA</label>
                 <input type="number" min="0" max="100" step="2" required>
                 <br><br>
                 <p style="color: red; margin-left: 0;">All fields are mandatory</p>
                 <br>
                 <!-- <input type="submit" id="submit"> -->
                 <div class="btn-box">
-                    <button type="button" id="back1">Back</button>
-                    <button type="button" id="next2">Next</button>
+                    <button type="button" id="back1" class="rounded-pill">Back</button>
+                    <button type="button" id="next2" class="rounded-pill ms-2">Next</button>
                 </div>
             </div>
             
@@ -256,8 +265,8 @@
                 <br>
                 <!-- <input type="submit" id="submit"> -->
                 <div class="btn-box">
-                    <button type="button" id="back2">Back</button>
-                    <button type="button" id="submit">Submit</button>
+                    <button type="button" id="back2" class="rounded-pill">Back</button>
+                    <button type="button" id="submit" class="rounded-pill ms-2">Submit</button>
                 </div>
             </div>
             
