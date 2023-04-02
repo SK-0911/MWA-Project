@@ -24,39 +24,41 @@
                 <h3>Personal Details</h3>
                 <label for="name" id="fname-label" class="mt-3 h5">First Name</label>
                 <input name="firstName" type="text" id="fname" placeholder="First name" class="form-control" ng-model="firstname" required>
-                <span class="error" style="color:red" ng-show="studentForm.firstname.$dirty && studentForm.firstname.$invalid"></span>
-                    <span ng-show="studentForm.firstname.$error.required">First Name is required</span>
+                <span class="error" style="color:red" ng-show="studentForm.firstName.$dirty && studentForm.firstName.$invalid">
+                    <span ng-show="studentForm.firstName.$error.required">First Name is required</span>
 				</span>
                 <!-- <p style="color: red;" id="errFirst" onkeyup="validate()" class="mb-0">Error</p> -->
                 <br>
                 <label for="name" id="lname-label" class="h5">Last Name</label>
                 <input name="lastName" type="text" id="lname" placeholder="Last name" class="form-control" ng-model="lastname" required>
-                <span class="error" style="color:red" ng-show="studentForm.lastname.$dirty && studentForm.lastname.$invalid"></span>
-                    <span ng-show="studentForm.lastname.$error.required">Last Name is required</span>
+                <span class="error" style="color:red" ng-show="studentForm.lastName.$dirty && studentForm.lastName.$invalid">
+                    <span ng-show="studentForm.lastName.$error.required">Last Name is required</span>
 				</span>
                 <br>
                 <label for="sapid" id="sapid-label" class="h5">SAP Id</label>
                 <input name="SapID" type="text" id="sapid" name="sapid" placeholder=" " maxlength="11" class="form-control" ng-model="sapid" required>
-                <span class="error" style="color:red" ng-show="studentForm.sapid.$dirty && studentForm.sapid.$invalid"></span>
-                    <span ng-show="studentForm.sapid.$error.required">SAP Id is required</span>
+                <span class="error" style="color:red" ng-show="studentForm.SapID.$dirty && studentForm.SapID.$invalid">
+                    <span ng-show="studentForm.SapID.$error.required">SAP Id is required</span>
 				</span>
                 <br>
                 <label for="email" id="email-label" class="h5">Email</label>
-                <div class="input-group mt-2">
-                    <input name="Email" type="email" id="email" name="email" placeholder="abc.xyz789" class="form-control border" ng-model="email" length="100" required>
-                    <span class="input-group-text">@nmims.edu.in</span>
-                    <span style="color:red" ng-show="studentForm.email.$dirty && studentForm.email.$invalid">
-                        <span ng-show="studentForm.email.$error.required">Email is required</span>
-                        <span ng-show="studentForm.email.$error.email">Invalid email address</span>
-                    </span>
-                </div>
-                
+                <input name="Email" type="email" id="email" name="email" placeholder="abc.xyz789@nmims.edu.in" class="form-control border" ng-model="email" length="100" required>
+                <!-- <span class="input-group-text">@nmims.edu.in</span> -->
+                <span style="color:red" ng-show="studentForm.Email.$dirty && studentForm.Email.$invalid">
+                    <span ng-show="studentForm.Email.$error.required">Email is required</span>
+                    <span ng-show="studentForm.Email.$error.email">Invalid email address</span>
+                </span>
                 <br>
                 <label for="phone" id="phone-label" class="h5">Phone</label>
                 <div class="input-group mt-2 ">
                     <span class="input-group-text"> +91 </span>
-                    <input name="Phone" type="tel" id="phone" class="form-control border" required>
+                    <input name="Phone" type="tel" id="phone" class="form-control border" ng-model="phone" required>
+                    
                 </div>
+                <span class="error" style="color:red" ng-show="studentForm.Phone.$dirty && studentForm.lastName.$invalid">
+                    <span ng-show="studentForm.Phone.$error.required">Phone No. is required</span>
+                </span>
+
                 
                 <br>
                 <label for="linkedin-url" id="linkedin-url" class="h5" placeholder>LinkedIn URL</label><br>
@@ -91,7 +93,9 @@
                 <p style="color: red; margin-left: 0;" class="mt-3">All fields are mandatory</p>
                 
                 <div class="btn-box">
-                    <button type="button" id="next1" class="rounded-pill" ng-disabled = "studentForm.firstName.$dirty && studentForm.firstName.$invalid || studentForm.lastName.$dirty && studentForm.lastName.$invalid || studentForm.email.$dirty && studentForm.email.$invalid" ng-click="submit()">Next</button>
+                    <button type="button" id="next1" class="rounded-pill" ng-disabled = "studentForm.firstName.$dirty && studentForm.firstName.$invalid || 
+                    studentForm.lastName.$dirty && studentForm.lastName.$invalid || studentForm.email.$dirty && studentForm.email.$invalid" 
+                    ng-click="submit()">Next</button>
                 </div>
             </div>
         </form>
