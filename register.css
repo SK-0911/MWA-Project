@@ -22,10 +22,10 @@ form{
 
 
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="Date"], input[type="number"] {
+input[type="text"], input[type="password"], input[type="Date"], input[type="number"] {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 0;
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid #ccc;
@@ -48,18 +48,28 @@ select{
     transition: all 0.3s ease-in-out;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="password"]:focus, input[type="Date"]:focus {
+select:focus{
     border-bottom: 2px solid #f44336;
     outline: none;
+    box-shadow: none;
+    animation: glowing 3s ease infinite;
+}
+
+input[type="url"], input[type="email"], input[type="tel"]{
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="Date"]:focus , input[type="url"]:focus{
+    border-bottom: 2px solid #f44336;
+    outline: none;
+    box-shadow: none;
     animation: glowing 3s ease infinite;
 }
 
 
 input[type="radio"] {
-    width: 1.2em;
-    height: 1.2em;
-    margin-left: 3%;
-    margin-top: 1%;
     accent-color: #f44336;
 }
 

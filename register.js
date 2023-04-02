@@ -35,3 +35,14 @@ $("#back2").click(function(){
 //     console.log(inputs[0]);
 // }
 
+var app = angular.module("mainApp", []);
+
+app.controller('studentController', function($scope){
+    $scope.reset = function(){  
+        $scope.firstName = "";  
+        $scope.lastName = "";  
+        $scope.email = "";  
+    }  
+              
+    $scope.reset();
+})
