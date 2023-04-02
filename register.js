@@ -35,14 +35,26 @@ $("#back2").click(function(){
 //     console.log(inputs[0]);
 // }
 
-var app = angular.module("mainApp", []);
+// var app = angular.module("mainApp", []);
 
-app.controller('studentController', function($scope){
-    $scope.reset = function(){  
-        $scope.firstName = "";  
-        $scope.lastName = "";  
-        $scope.email = "";  
-    }  
+// app.controller('studentController', function($scope){
+//     $scope.reset = function(){  
+//         $scope.firstName = "";  
+//         $scope.lastName = "";  
+//         $scope.email = "";  
+//     }  
               
-    $scope.reset();
-})
+//     $scope.reset();
+// })
+
+var mainApp = angular.module("mainApp", []);
+
+	mainApp.controller('studentController', function($scope){
+		$scope.reset = function(){
+			$scope.firstname = "";
+			$scope.lastname = "";
+            $scope.sapid = "";
+			$scope.email = "";
+		}
+		$scope.reset();
+});
