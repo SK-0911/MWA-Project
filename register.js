@@ -27,15 +27,18 @@ function validate(){
     var lname = document.studentForm.lastName.value;
     var email = document.studentForm.ClgEmail.value;
     var ph = document.studentForm.Phone.value;
+    var sap = document.studentForm.SapID.value;
 
     var errfname = document.getElementById("errfname");
     var errlname = document.getElementById("errlname");
     var errEmail = document.getElementById("errEmail");
     var errPh = document.getElementById("errPh");
+    var errSap = document.getElementById("errSap");
 
     var regex = /^[a-zA-Z\s]+$/;   
     var eRegex = /^[a-z]\.[a-z][0-9]{3}@nmims\.edu\.in$/;  
-    var phRegex = /^[0-9]{10}$/;           
+    var phRegex = /^[0-9]{10}$/;
+    var sapRegex = /^[0-9]{11}$/;
     if(regex.test(fname) === false) {
         errfname.style.display = "block";
     } 
@@ -65,28 +68,33 @@ function validate(){
         errPh.style.display = "none";
     }
 
+    if (ph === ""){
+        errPh.style.display = "none";
+    }
+
+    if(sapRegex.test(sap) === false) {
+        errSap.style.display = "block";
+    }
+
+    if (sapRegex.test(sap) === true){
+        errSap.style.display = "none";
+    }
+
+    if (sap === ""){
+        errSap.style.display = "none";
+    }
+
 }
 
-// var app = angular.module("mainApp", []);
+var app = angular.module("mainApp", []);
 
-// app.controller('studentController', function($scope){
-//     $scope.reset = function(){  
-//         $scope.firstName = "";  
-//         $scope.lastName = "";  
-//         $scope.email = "";  
-//     }  
+app.controller('studentController', function($scope){
+    $scope.reset = function(){  
+        $scope.firstName = "";  
+        $scope.lastName = "";  
+        $scope.email = "";  
+    }  
               
-//     $scope.reset();
-// })
+    $scope.reset();
+})
 
-var mainApp = angular.module("mainApp", []);
-
-	mainApp.controller('studentController', function($scope){
-		$scope.reset = function(){
-			$scope.firstname = "";
-			$scope.lastname = "";
-            $scope.sapid = "";
-			$scope.email = "";
-		}
-		$scope.reset();
-});
