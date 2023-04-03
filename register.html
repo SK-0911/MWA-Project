@@ -275,7 +275,19 @@
             </div>
             
         </form>
-    
+    <script>
+        var mainApp = angular.module("mainApp", []);
+
+        mainApp.controller('studentController', function($scope){
+            $scope.reset = function(){
+                $scope.firstname = "";
+                $scope.lastname = "";
+                $scope.sapid = "";
+                $scope.email = "";
+            }
+            $scope.reset();
+        });
+    </script>
     <script src="register.js"></script>
 </body>
 </html>
