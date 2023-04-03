@@ -22,18 +22,50 @@ $("#back2").click(function(){
     $("#form2").show();
 });
 
-// function validate(){
-//     var errs = new Array()
-//     errs[0] = "errFirst";
-//     errs[1] = "errLast";
-//     errs[2] = "errEmail";
-//     var inputs = new Array();
-//     inputs[0] = document.getElementById('fname').value;
-//     inputs[1] = document.getElementById('lname').value;
-//     inputs[2] = document.getElementById('email').value;
+function validate(){
+    var fname = document.studentForm.firstName.value;
+    var lname = document.studentForm.lastName.value;
+    var email = document.studentForm.ClgEmail.value;
+    var ph = document.studentForm.Phone.value;
 
-//     console.log(inputs[0]);
-// }
+    var errfname = document.getElementById("errfname");
+    var errlname = document.getElementById("errlname");
+    var errEmail = document.getElementById("errEmail");
+    var errPh = document.getElementById("errPh");
+
+    var regex = /^[a-zA-Z\s]+$/;   
+    var eRegex = /^[a-z]\.[a-z][0-9]{3}@nmims\.edu\.in$/;  
+    var phRegex = /^[0-9]{10}$/;           
+    if(regex.test(fname) === false) {
+        errfname.style.display = "block";
+    } 
+    if (fname === ""){
+        errfname.style.display = "none";
+    }
+
+    if(regex.test(lname) === false) {
+        errlname.style.display = "block";
+    } 
+    if (lname === ""){
+        errlname.style.display = "none";
+    }
+
+    if(eRegex.test(email) === false) {
+        errEmail.style.display = "block";
+    } 
+    if (email === ""){
+        errEmail.style.display = "none";
+    }
+
+    if(phRegex.test(ph) === false) {
+        errPh.style.display = "block";
+    }
+
+    if (phRegex.test(ph) === true){
+        errPh.style.display = "none";
+    }
+
+}
 
 // var app = angular.module("mainApp", []);
 
