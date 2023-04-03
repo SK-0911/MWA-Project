@@ -47,14 +47,3 @@ $("#back2").click(function(){
 //     $scope.reset();
 // })
 
-var mainApp = angular.module("mainApp", []);
-
-	mainApp.controller('studentController', function($scope){
-		$scope.reset = function(){
-			$scope.firstname = "";
-			$scope.lastname = "";
-            $scope.sapid = "";
-			$scope.email = "";
-		}
-		$scope.reset();
-});
