@@ -15,7 +15,7 @@ $conn = new mysqli('localhost', 'root', '', 'connection');
 if($conn->connect_error){
     die('Connection Failed : ' .$conn->connect_error);
 }else{
-    $stmt = $conn->prepare("insert into student_registration(firstName, lastName, SapID, Email, Phone, linkedin, github, DOB, gender) 
+    $stmt = $conn->prepare("INSERT into student_registration(firstName, lastName, SapID, Email, Phone, linkedin, github, DOB, gender) 
     values(?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("ssisissss", $firstName, $lastName, $SapID, $Email, $Phone, $linkedin, $github, $DOB, $gender);
     $stmt->execute();
