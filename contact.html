@@ -66,12 +66,14 @@
 			<h4>Write to us</h4>
 		</div>
 		<div class="contact-col">
-			<form action="">
-				<input type="text" placeholder="Enter Your name" required>
-				<input type="email" placeholder="Enter email address" required>
-				<input type="text" placeholder="Enter Your Subject" required>
-				<textarea rows="8" placeholder="Message" required style="resize: none;"></textarea>
+			<form action="https://formsubmit.co/shubham.kumar444@nmims.edu.in" method="POST">
+				<input type="text" name="name" placeholder="Enter Your name" required>
+				<input type="email" name="email" placeholder="Enter email address" required>
+				<input type="text" name="subject" placeholder="Enter Your Subject" required>
+				<textarea rows="8" name="message" placeholder="Message" required style="resize: none;"></textarea>
 				<button type="submit" class="submit-btn red-btn">Send Message</button>
+				<input type="hidden" name="_subject" value="New query!">
+				<input type="hidden" name="_template" value="table">
 			</form>
 		</div>
 	</div>
