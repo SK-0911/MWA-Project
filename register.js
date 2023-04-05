@@ -39,6 +39,8 @@ function validate(){
     var eRegex = /^[a-z]\.[a-z][0-9]{3}@nmims\.edu\.in$/;  
     var phRegex = /^[0-9]{10}$/;
     var sapRegex = /^[0-9]{11}$/;
+
+    // First Name
     if(regex.test(fname) === false) {
         errfname.style.display = "block";
     } 
@@ -46,6 +48,7 @@ function validate(){
         errfname.style.display = "none";
     }
 
+    // last Name
     if(regex.test(lname) === false) {
         errlname.style.display = "block";
     } 
@@ -53,6 +56,7 @@ function validate(){
         errlname.style.display = "none";
     }
 
+    // Email
     if(eRegex.test(email) === false) {
         errEmail.style.display = "block";
     } 
@@ -60,6 +64,7 @@ function validate(){
         errEmail.style.display = "none";
     }
 
+    // Phone
     if(phRegex.test(ph) === false) {
         errPh.style.display = "block";
     }
@@ -72,6 +77,7 @@ function validate(){
         errPh.style.display = "none";
     }
 
+    // SAP ID
     if(sapRegex.test(sap) === false) {
         errSap.style.display = "block";
     }

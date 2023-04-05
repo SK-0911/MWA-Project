@@ -23,8 +23,8 @@
             <div >
                 <h3>Personal Details</h3>
                 <label for="name" id="fname-label" class="mt-3 h5">First Name</label>
-                <input name="firstName" type="text" id="fname" placeholder="First name" class="form-control" ng-model="firstname" onkeyup="validate();" required>
-                <span class="error" style="color:red" ng-show="studentForm.firstName.$dirty && studentForm.firstName.$invalid">
+                <input name="firstName" type="text" id="fname" class="mb-2" placeholder="First name" class="form-control" ng-model="firstname" onkeyup="validate();" required><br>
+                <span class="error mt-3" style="color:red" ng-show="studentForm.firstName.$dirty && studentForm.firstName.$invalid">
                     <span ng-show="studentForm.firstName.$error.required">First Name is required</span>
 				</span>
                 <span style="color: red; display: none;" id="errfname">Enter a valid first name</span>
@@ -45,20 +45,20 @@
                 <span style="color: red; display: none;" id="errSap">Enter a valid 11 Digit SAP ID</span>
                 <br>
                 <label for="email" id="email-label" class="h5">Personal Email ID</label>
-                <input name="PerEmail" type="email" id="email" name="email" placeholder="abc@xyz.com" class="form-control border" ng-model="email" length="100" required>
+                <input name="PerEmail" type="email" id="email" placeholder="abc@xyz.com" class="form-control border" ng-model="email" length="100" required>
                 <!-- <span class="input-group-text">@nmims.edu.in</span> -->
-                <span style="color:red" ng-show="studentForm.Email.$dirty && studentForm.Email.$invalid">
-                    <span ng-show="studentForm.Email.$error.required">Personal Email is required</span>
-                    <span ng-show="studentForm.Email.$error.email">Invalid email address</span>
+                <span style="color:red" ng-show="studentForm.PerEmail.$dirty && studentForm.PerEmail.$invalid">
+                    <span ng-show="studentForm.PerEmail.$error.required">Personal Email is required</span>
+                    <span ng-show="studentForm.PerEmail.$error.email">Invalid email address</span>
                 </span>
 
                 <br>
                 <label for="email" id="email-label" class="h5">NMIMS Email ID</label>
-                <input name="ClgEmail" type="email" id="email" name="email" placeholder="abc.xyz789@nmims.edu.in"
+                <input name="ClgEmail" type="email" id="email" placeholder="abc.xyz789@nmims.edu.in"
                     class="form-control border" ng-model="email" length="100" onkeyup="validate()" required>
                 <!-- <span class="input-group-text">@nmims.edu.in</span> -->
-                <span style="color:red" ng-show="studentForm.Email.$dirty && studentForm.Email.$invalid">
-                    <span ng-show="studentForm.Email.$error.required">NMIMS Email is required</span>
+                <span style="color:red" ng-show="studentForm.ClgEmail.$dirty && studentForm.ClgEmail.$invalid">
+                    <span ng-show="studentForm.ClgEmail.$error.required">NMIMS Email is required</span>
                 </span>
                 <span style="color: red; display: none;" id="errEmail">Enter a valid NMIMS email ID</span>
                 
@@ -106,28 +106,13 @@
                 <p style="color: red; margin-left: 0;" class="mt-3">All fields are mandatory</p>
                 
                 <div class="btn-box">
-                    <button type="button" id="next" class="rounded-pill" ng-disabled = "studentForm.firstName.$dirty && studentForm.firstName.$invalid || 
-                    studentForm.lastName.$dirty && studentForm.lastName.$invalid || studentForm.SapID.$dirty && studentForm.SapID.$invalid || studentForm.email.$dirty && studentForm.email.$invalid || studentForm.Phone.$dirty && studentForm.Phone.$invalid" 
-                    ng-click="submit()" value="Next">Next</button>
+                    <button type="button" id="next1" class="rounded-pill" ng-click="submit()" value="Next">Next</button>
                 </div>
+                <!-- ng-disabled = "studentForm.firstName.$dirty && studentForm.firstName.$invalid ||
+                studentForm.lastName.$dirty && studentForm.lastName.$invalid || studentForm.SapID.$dirty && studentForm.SapID.$invalid
+                || studentForm.email.$dirty && studentForm.email.$invalid || studentForm.Phone.$dirty && studentForm.Phone.$invalid" -->
             </div>
         </form>
-
-        <script>
-            function submitForm()
-            {
-                //Get form data
-                var formData = newformData(document.getElementsById("form1"));
-
-                //Send form data via AJAX
-                var xhr = new XMLHttpRequest();
-                xhr.open("POST", "connect.php");
-                xhr.send(formData);
-                
-                //redirect to second form
-                window.location.href = "form2";
-            }
-        </script>
 
         <form  id="form2">
             <div>
