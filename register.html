@@ -113,6 +113,22 @@
             </div>
         </form>
 
+        <script>
+            function submitForm()
+            {
+                //Get form data
+                var formData = newformData(document.getElementsById("form1"));
+
+                //Send form data via AJAX
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "connect.php");
+                xhr.send(formData);
+                
+                //redirect to second form
+                window.location.href = "form2";
+            }
+        </script>
+
         <form  id="form2">
             <div>
                 <!-- qualification details -->
