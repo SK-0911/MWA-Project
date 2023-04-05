@@ -9,6 +9,34 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.login-dropdown-btn {
+		  position: relative;
+		  display: inline-block;
+		}
+		
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f1f1f1;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+		
+		.dropdown-content a {
+		  color: #ffff;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		}
+		
+		.dropdown-content a:hover {background-color: #ddd;}
+		
+		.dropdown:hover .dropdown-content {display: block;}
+		
+		.dropdown:hover .dropbtn {background-color: #3e8e41;}
+		</style>
 </head>
 <body>
 	<section class="header">
@@ -22,6 +50,15 @@
 					<li><a href="">SCHOOLS</li></a>
 					<li><a href="contact.html">CONTACT</li></a>
 					<li><a href="register.html">REGISTER</li></a>
+					<li><a href="login.html">USER LOGIN</a></li>
+					<!-- <div class="login-dropdown-btn">
+						<li>USER LOGIN
+							<div class="dropdown-content">
+								<a href="#">Student</a>							
+								<a href="#">Admin</a>
+							</div>
+						</li> -->
+					</div>
 				</ul>
 			</div>
 			<i class="fa fa-bars" onclick="showmenu()"></i>
