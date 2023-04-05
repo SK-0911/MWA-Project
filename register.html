@@ -19,7 +19,7 @@
 </head>
 <body>
         <h1>Student Registration</h1>
-        <form action = "connect.php" method = "post" id="form1" ng-app = "mainApp" ng-controller = "studentController" name = "studentForm" novalidate>
+        <form action = "create-script.php" method = "post" id="form1" ng-app = "mainApp" ng-controller = "studentController" name = "studentForm" novalidate>
             <div >
                 <h3>Personal Details</h3>
                 <label for="name" id="fname-label" class="mt-3 h5">First Name</label>
@@ -113,6 +113,20 @@
                 || studentForm.email.$dirty && studentForm.email.$invalid || studentForm.Phone.$dirty && studentForm.Phone.$invalid" -->
             </div>
         </form>
+        <script>
+            function submitForm(){
+                //get form data
+                var formData = new FormData(document.getElementById("form1"));
+                
+                //send form data via AJAX
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "connect.php");
+                xhr.send(formData);
+    
+               
+             }
+             </script>
+            
 
         <form  id="form2">
             <div>
