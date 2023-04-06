@@ -1,3 +1,7 @@
+<?php
+include ('create-script.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +23,7 @@
 </head>
 <body>
         <h1>Student Registration</h1>
-        <form action = "create-script.php" method = "post" id="form1" ng-app = "mainApp" ng-controller = "studentController" name = "studentForm" novalidate>
+        <form action = "" method = "post" id="form1" ng-app = "mainApp" ng-controller = "studentController" name = "studentForm" novalidate>
             <div >
                 <h3>Personal Details</h3>
                 <label for="name" id="fname-label" class="mt-3 h5">First Name</label>
@@ -106,7 +110,7 @@
                 <p style="color: red; margin-left: 0;" class="mt-3">All fields are mandatory</p>
                 
                 <div class="btn-box">
-                    <button type="button" id="next1" class="rounded-pill" ng-click="submit()" value="Next">Next</button>
+                    <button type="button" name="create" id="next1" class="rounded-pill" ng-click="submit()" value="Next">Next</button>
                 </div>
                 <!-- ng-disabled = "studentForm.firstName.$dirty && studentForm.firstName.$invalid ||
                 studentForm.lastName.$dirty && studentForm.lastName.$invalid || studentForm.SapID.$dirty && studentForm.SapID.$invalid
