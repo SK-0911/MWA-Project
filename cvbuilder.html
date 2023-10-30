@@ -49,10 +49,11 @@
             <div class="menu">
 
                 <div class="index menuItem" onclick="home()">Home</div>
-                <div class="CVBulider menuItem" onclick="cvbuilder()"  style="background-color: #8f2e23 ;color: white;">CV Builder</div>
+                <div class="CVBulider menuItem" onclick="cvbuilder()" style="background-color: #8f2e23 ;color: white;">
+                    CV Builder</div>
                 <div class="Docs menuItem" onclick="docs()">Documents</div>
                 <div class="prep menuItem" onclick="prep();">Preparation</div>
-    
+
             </div>
 
 
@@ -100,12 +101,12 @@
                             <p>Course</p>
                             <select name="course" id="course" autocomplete="off">
                                 <option selected disabled>Select your Course</option>
-                                <option value="B.Tech" onclick="enableSpecs()">B.Tech</option>
-                                <option value="MBA Tech" id="mba" onclick="disableOtherSpecs()">MBA Tech</option>
+                                <option value="btech" id="btech" onclick="enableSpecs(); gpa(); " >B.Tech</option>
+                                <option value="mbatech" id="mba" onclick="disableOtherSpecs(); gpa();">MBA Tech</option>
                             </select>
                         </div>
 
-                        
+
                         <div class="specialisation">
                             <p>Specialisation</p>
                             <select name="specialisation" id="specialisation" autocomplete="off">
@@ -133,7 +134,9 @@
                     <div class="Academic">
 
                         <h3>UNDERGRADUATE</h3>
-
+                        <div class="sem-wise-gpa" id="sem-gpa">
+                          
+                        </div>
                         <div class="undergrad">
                             <div class="Institute">
                                 <p>Institute</p>
@@ -324,7 +327,7 @@
 
                                 <div class="Year">
                                     <p>Year</p>
-                                    <input type= "date">
+                                    <input type="date">
                                 </div>
                             </div>
                             <div class="buttons">
@@ -339,11 +342,11 @@
 
 
 
-                    
+
                     <div class="Skills">
 
                         <h2>Skills</h2>
-                    
+
                         <form action="">
 
                             <div class="SkillsForm">
@@ -363,7 +366,7 @@
                     </div>
 
 
-                    
+
                     <div class="PORs">
 
                         <h2>Position Of Responsibility</h2>
@@ -425,7 +428,7 @@
 
                                 <div class="Year">
                                     <p>Year</p>
-                                    <input type= "date">
+                                    <input type="date">
                                 </div>
                             </div>
                             <div class="buttons">
@@ -460,7 +463,7 @@
 
                                 <div class="Year">
                                     <p>Year</p>
-                                    <input type= "date">
+                                    <input type="date">
                                 </div>
                             </div>
                             <div class="buttons">
@@ -494,23 +497,89 @@
 
         </div>
     </div>
-    
+
     <script>
 
-        function disableOtherSpecs()
-        {
+        function disableOtherSpecs() {
             var elements = document.getElementsByClassName("specs");
-            elements[0].setAttribute("disabled",'');
-            elements[1].setAttribute("disabled",'');
+            elements[0].setAttribute("disabled", '');
+            elements[1].setAttribute("disabled", '');
             document.getElementById("ce").setAttribute("selected", '');
+
         }
 
-        function enableSpecs()
-        {
+        function enableSpecs() {
             var elements = document.getElementsByClassName("specs");
-            elements[0].removeAttribute("disabled",'');
-            elements[1].removeAttribute("disabled",'');
+            elements[0].removeAttribute("disabled", '');
+            elements[1].removeAttribute("disabled", '');
         }
+
+        function gpa() {
+            var selectedCourse = document.getElementById("course");
+            var divElement = document.getElementById("sem-gpa");
+            while(divElement.lastElementChild)
+            {
+                divElement.removeChild(divElement.lastChild);
+            }
+            if (selectedCourse.value == "btech") {
+               
+                for (let i = 0; i < 8; i++) {
+                    var divElement = document.getElementById("sem-gpa");
+                    semester = i + 1;
+                    var innerDiv = document.createElement("div");
+                    innerDiv.setAttribute("class", "sem");
+
+
+                    var para = document.createElement("p");
+                    para.innerHTML = "SEM " + semester + " GPA";
+
+
+                    var ip = document.createElement("input");
+                    ip.setAttribute("type", "text");
+                    ip.setAttribute("name", "sem" + semester);
+                    ip.setAttribute("id", "sem" + semester);
+
+
+                    innerDiv.appendChild(para);
+                    innerDiv.appendChild(ip);
+
+                    divElement.appendChild(innerDiv);
+                }
+            }
+
+            else {
+                var selectedCourse = document.getElementById("course");
+                var divElement = document.getElementById("sem-gpa");
+                while(divElement.lastElementChild)
+                {
+                    divElement.removeChild(divElement.lastChild);
+                }
+                for (let i = 0; i < 10; i++) {
+                    semester = i + 1;
+                    var innerDiv = document.createElement("div");
+                    innerDiv.setAttribute("class", "sem");
+
+
+                    var para = document.createElement("p");
+                    para.innerHTML = "SEM " + semester + " GPA";
+
+
+                    var ip = document.createElement("input");
+                    ip.setAttribute("type", "text");
+                    ip.setAttribute("name", "sem" + semester);
+                    ip.setAttribute("id", "sem" + semester);
+
+
+                    innerDiv.appendChild(para);
+                    innerDiv.appendChild(ip);
+
+                    divElement.appendChild(innerDiv);
+                }
+            }
+        }
+
+
+
     </script>
 </body>
 

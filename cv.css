@@ -343,3 +343,15 @@ h2{
 button{
     cursor: pointer;
 }
+
+
+
+
+.sem-wise-gpa
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5em;
+    row-gap: 1em;
+    margin-bottom: 20px;
+}
