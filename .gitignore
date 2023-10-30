@@ -1,2 +1,4 @@
 # ignores all json file
 *.json
+node_modules
+app.js

@@ -18,3 +18,33 @@ function updateText(){
     }
     setTimeout(updateText, 300)
 }
+
+function myfunction(divTag) {
+ divTag.classList.toggle("change");
+ document.getElementsByClassName("menu")[0].classList.toggle("menuSlide");
+ 
+}
+
+ function home()
+ {
+     window.location.href = "./home.html";
+ }
+ function cvbuilder()
+ {
+     window.location.href = "./cvbuilder.html";
+ }
+
+ function docs()
+ {
+     window.location.href = "./docs.html";
+ }
+
+ function Prep()
+ {
+     
+ }
+
+ function Announcements()
+ {
+     
+ }
